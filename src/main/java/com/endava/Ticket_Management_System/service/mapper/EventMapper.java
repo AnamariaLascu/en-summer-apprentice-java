@@ -10,7 +10,7 @@ public class EventMapper {
         eventDTO.setEventDescription(event.getEventDescription());
         eventDTO.setEventName(event.getEventName());
         eventDTO.setEventStartDate(event.getStartDate());
-        eventDTO.setGetEventEndDate(event.getEndDate());
+        eventDTO.setEventEndDate(event.getEndDate());
         eventDTO.setVenue(event.getVenueID());
         eventDTO.setEventType(event.getEventTypeID());
         return eventDTO;

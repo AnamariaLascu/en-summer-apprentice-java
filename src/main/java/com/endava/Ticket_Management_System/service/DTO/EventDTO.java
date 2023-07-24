@@ -3,8 +3,6 @@ import com.endava.Ticket_Management_System.model.EventType;
 import com.endava.Ticket_Management_System.model.Venue;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-
-import java.time.LocalDateTime;
 import java.util.Date;
 @JsonSerialize
 public class EventDTO {
@@ -13,16 +11,16 @@ public class EventDTO {
     private String eventDescription;
     private String eventName;
     private Date eventStartDate;
-    private Date getEventEndDate;
+    private Date eventEndDate;
     private Venue venue;
     private EventType eventType;
 
-    public EventDTO(int eventDTOID, String eventDescription, String eventName, Date eventStartDate, Date getEventEndDate, Venue venue, EventType eventType) {
+    public EventDTO(int eventDTOID, String eventDescription, String eventName, Date eventStartDate, Date eventEndDate, Venue venue, EventType eventType) {
         this.eventDTOID = eventDTOID;
         this.eventDescription = eventDescription;
         this.eventName = eventName;
         this.eventStartDate = eventStartDate;
-        this.getEventEndDate = getEventEndDate;
+        this.eventEndDate = eventEndDate;
         this.venue = venue;
         this.eventType = eventType;
     }
@@ -59,12 +57,12 @@ public class EventDTO {
         this.eventStartDate = eventStartDate;
     }
 
-    public Date getGetEventEndDate() {
-        return getEventEndDate;
+    public Date getEventEndDate() {
+        return eventEndDate;
     }
 
-    public void setGetEventEndDate(Date getEventEndDate) {
-        this.getEventEndDate = getEventEndDate;
+    public void setEventEndDate(Date eventEndDate) {
+        this.eventEndDate = eventEndDate;
     }
 
     public Venue getVenue() {

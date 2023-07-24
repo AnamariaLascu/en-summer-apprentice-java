@@ -11,5 +11,8 @@ import java.util.List;
 public interface EventService {
     public EventDTO findByEventName(String name);
     public List<EventDTO> findAll();
+    List<EventDTO> findByVenueNameAndEventType(int venueId, String eventType);
+
+
 }
 

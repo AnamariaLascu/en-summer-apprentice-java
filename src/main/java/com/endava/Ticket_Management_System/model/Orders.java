@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "Orders")
@@ -22,7 +23,7 @@ public class Orders implements Serializable {
     private TicketCategory ticketCategoryID;
 
     @Column(name = "orderedAt")
-    private LocalDateTime orderedAt;
+    private Date orderedAt;
 
     @Column(name = "numberOfTickets")
     private int numberOfTickets;
@@ -33,7 +34,7 @@ public class Orders implements Serializable {
     public Orders() {
     }
 
-    public Orders(int orderID, Customer customerID, TicketCategory ticketCategoryID, LocalDateTime orderedAt, int numberOfTickets, BigDecimal totalPrice) {
+    public Orders(int orderID, Customer customerID, TicketCategory ticketCategoryID, Date orderedAt, int numberOfTickets, BigDecimal totalPrice) {
         this.orderID = orderID;
         this.customerID = customerID;
         this.ticketCategoryID = ticketCategoryID;
@@ -54,7 +55,7 @@ public class Orders implements Serializable {
         return ticketCategoryID;
     }
 
-    public LocalDateTime getOrderedAt() {
+    public Date getOrderedAt() {
         return orderedAt;
     }
 
@@ -78,7 +79,7 @@ public class Orders implements Serializable {
         this.ticketCategoryID = ticketCategoryID;
     }
 
-    public void setOrderedAt(LocalDateTime orderedAt) {
+    public void setOrderedAt(Date orderedAt) {
         this.orderedAt = orderedAt;
     }
 

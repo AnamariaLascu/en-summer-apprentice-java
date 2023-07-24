@@ -9,10 +9,6 @@ import java.util.List;
 @Service
 public class AccountService {
 
-    //    @Autowired
-    /*
-    Field injection is discouraged since it makes the code harder to test and maintain
-     */
     private AccountRepository accountRepository;
 
     public AccountService(AccountRepository accountRepository) {
